@@ -56,6 +56,8 @@ const mainnetIcons: TokenIcons = {
     [SupportedMainnet.Mode]: {
         ["0x4200000000000000000000000000000000000006".toLowerCase()]:
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        ["0x6863fb62ed27a9ddf458105b507c15b5d741d62e".toLowerCase()]:
+            "https://assets.coingecko.com/coins/images/37504/standard/kim.jpg?1714579040",
     },
     [SupportedMainnet.Mantle]: {
         ["0x78c1b0c915c4faa5fffa6cabf0219da63d7f4cb8".toLowerCase()]:
