@@ -13,6 +13,7 @@ enum SupportedTestnet {
 enum SupportedMainnet {
     Mode = SupportedChain.Mode,
     Mantle = SupportedChain.Mantle,
+    Base = SupportedChain.Base,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -24,6 +25,14 @@ const TOKEN_LIST_URLS = [
 ];
 
 const testnetIcons: TokenIcons = {
+    [SupportedTestnet.Holesky]: {
+        ["0x94373a4919b3240d86ea41593d5eba789fef3848".toLowerCase()]:
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        ["0x0fe5a93b63accf31679321dd0daf341c037a1187".toLowerCase()]:
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
+        ["0xa5ba8636a78bbf1910430d0368c0175ef5a1845b".toLowerCase()]:
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+    },
     [SupportedTestnet.CeloAlfajores]: {
         ["0xf194afdf50b03e69bd7d057c1aa9e10c9954e4c9".toLowerCase()]:
             "https://assets.coingecko.com/coins/images/11090/standard/InjXBNx9_400x400.jpg?1696511031",
@@ -34,14 +43,6 @@ const testnetIcons: TokenIcons = {
         ["0x22d8655b405f6a8d6bb7c5838aaf187a32158b07".toLowerCase()]:
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
     },
-    [SupportedTestnet.Holesky]: {
-        ["0x94373a4919b3240d86ea41593d5eba789fef3848".toLowerCase()]:
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-        ["0x0fe5a93b63accf31679321dd0daf341c037a1187".toLowerCase()]:
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
-        ["0xa5ba8636a78bbf1910430d0368c0175ef5a1845b".toLowerCase()]:
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    },
     [SupportedTestnet.MantleSepolia]: {
         ["0xb1eda18c1b730a973dac2ec37cfd5685d7de10dd".toLowerCase()]:
             "https://assets.coingecko.com/coins/images/30980/standard/token-logo.png?1696529819",
@@ -50,6 +51,7 @@ const testnetIcons: TokenIcons = {
         ["0xd1d3cf05ef211c71056f0af1a7fd1df989e109c3".toLowerCase()]:
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
     },
+    [SupportedTestnet.SonicTestnet]: {},
 };
 
 const mainnetIcons: TokenIcons = {
@@ -71,6 +73,7 @@ const mainnetIcons: TokenIcons = {
         ["0x201eba5cc46d216ce6dc03f6a759e8e766e956ae".toLowerCase()]:
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
+    [SupportedMainnet.Base]: {},
 };
 
 const promises = TOKEN_LIST_URLS.map(async (url) => {
