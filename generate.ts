@@ -8,6 +8,7 @@ enum SupportedTestnet {
     CeloAlfajores = SupportedChain.CeloAlfajores,
     MantleSepolia = SupportedChain.MantleSepolia,
     SonicTestnet = SupportedChain.SonicTestnet,
+    BaseSepolia = SupportedChain.BaseSepolia,
 }
 
 enum SupportedMainnet {
@@ -72,6 +73,7 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
     },
     [SupportedTestnet.SonicTestnet]: {},
+    [SupportedTestnet.BaseSepolia]: {},
 });
 
 const mainnetIcons: TokenIcons = lowercaseAddressKeys({
@@ -93,7 +95,12 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x201eba5cc46d216ce6dc03f6a759e8e766e956ae":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
-    [SupportedMainnet.Base]: {},
+    [SupportedMainnet.Base]: {
+        "0x5dC25aA049837B696d1dc0F966aC8DF1491f819B":
+            "https://assets.coingecko.com/coins/images/37504/standard/kim.jpg?1714579040",
+        "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c":
+            "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png?1696507857",
+    },
 });
 
 const promises = TOKEN_LIST_URLS.map(async (url) => {
