@@ -98,6 +98,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
     [SupportedMainnet.Base]: {
         "0x5dC25aA049837B696d1dc0F966aC8DF1491f819B":
             "https://assets.coingecko.com/coins/images/37504/standard/kim.jpg?1714579040",
+        "0x7B8C5d97c25B65f89817E8046851A32e963fc9cD":
+            "https://assets.coingecko.com/coins/images/37504/standard/kim.jpg?1714579040",
         "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c":
             "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png?1696507857",
     },
