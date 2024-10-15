@@ -115,6 +115,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png",
         "0x7d02A3E0180451B17e5D7f29eF78d06F8117106C":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
+        "0x2def195713cf4a606b49d07e520e22c17899a736":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
 });
 
