@@ -18,8 +18,8 @@ importers:
         specifier: ^9.12.0
         version: 9.12.0
       '@metrom-xyz/contracts':
-        specifier: ^0.26.0
-        version: 0.26.0(typescript@5.6.3)
+        specifier: ^0.27.0
+        version: 0.27.0(typescript@5.6.3)
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -57,8 +57,8 @@ importers:
         specifier: ^8.8.1
         version: 8.8.1(eslint@8.57.1)(typescript@5.6.3)
       viem:
-        specifier: ^2.21.22
-        version: 2.21.22(typescript@5.6.3)
+        specifier: ^2.21.25
+        version: 2.21.25(typescript@5.6.3)
 
 packages:
 
@@ -325,8 +325,8 @@ packages:
     resolution: {integrity: sha512-93zYdMES/c1D69yZiKDBj0V24vqNzB/koF26KPaagAfd3P/4gUlh3Dys5ogAK+Exi9QyzlD8x/08Zt7wIKcDcA==}
     deprecated: Use @eslint/object-schema instead
 
-  '@metrom-xyz/contracts@0.26.0':
-    resolution: {integrity: sha512-IlhJJDyCX6AcAoIJsGZlrdP5y3eau8jxwX9MXTW19HVNakqM5cT7jZ+8D2/O12pPFxGC4iV2Z46M0IVAt6x+mg==}
+  '@metrom-xyz/contracts@0.27.0':
+    resolution: {integrity: sha512-zeWVy7wRlYVUMyHd7MVkqT9aOaNkTAQkVt4fmr1OmroOowLHqJJAIiRsJ0CeJECOOwTn8VLmf3aOpX4AGNOQWA==}
 
   '@noble/curves@1.6.0':
     resolution: {integrity: sha512-TlaHRXDehJuRNR9TfZDNQ45mMEd5dwUwmicsafcIX4SsNiqnCHKjE/1alYPd/lDRVhxdhUAlv8uEhMCI5zjIJQ==}
@@ -1163,8 +1163,8 @@ packages:
   uri-js@4.4.1:
     resolution: {integrity: sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==}
 
-  viem@2.21.22:
-    resolution: {integrity: sha512-jU+WniqIhwDXfgWWkNX7YqlGqenzTa5roLDNs2cbcUGQXxG8aQt1vlTqeezM8W1kepkaU/jvR2QSq/lGirpzrQ==}
+  viem@2.21.25:
+    resolution: {integrity: sha512-fQbFLVW5RjC1MwjelmzzDygmc2qMfY17NruAIIdYeiB8diQfhqsczU5zdGw/jTbmNXbKoYnSdgqMb8MFZcbZ1w==}
     peerDependencies:
       typescript: '>=5.0.4'
     peerDependenciesMeta:
@@ -1459,9 +1459,9 @@ snapshots:
 
   '@humanwhocodes/object-schema@2.0.3': {}
 
-  '@metrom-xyz/contracts@0.26.0(typescript@5.6.3)':
+  '@metrom-xyz/contracts@0.27.0(typescript@5.6.3)':
     dependencies:
-      viem: 2.21.22(typescript@5.6.3)
+      viem: 2.21.25(typescript@5.6.3)
     transitivePeerDependencies:
       - bufferutil
       - typescript
@@ -2279,7 +2279,7 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  viem@2.21.22(typescript@5.6.3):
+  viem@2.21.25(typescript@5.6.3):
     dependencies:
       '@adraffy/ens-normalize': 1.11.0
       '@noble/curves': 1.6.0
