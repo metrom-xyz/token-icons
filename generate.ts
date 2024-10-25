@@ -117,6 +117,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
         "0x2def195713cf4a606b49d07e520e22c17899a736":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+        "0x19e26b0638bf63aa9fa4d14c6baf8d52ebe86c5c":
+            "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
     },
 });
 
