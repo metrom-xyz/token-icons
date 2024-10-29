@@ -119,6 +119,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0x19e26b0638bf63aa9fa4d14c6baf8d52ebe86c5c":
             "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0x541FD749419CA806a8bc7da8ac23D346f2dF8B77":
+            "https://assets.coingecko.com/coins/images/36800/standard/solvBTC.png?1719810684",
+        "0xCC0966D8418d412c599A6421b760a847eB169A8c":
+            "https://assets.coingecko.com/coins/images/39384/standard/unnamed.png?1721961640",
     },
 });
 
