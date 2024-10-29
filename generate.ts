@@ -123,6 +123,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/36800/standard/solvBTC.png?1719810684",
         "0xCC0966D8418d412c599A6421b760a847eB169A8c":
             "https://assets.coingecko.com/coins/images/39384/standard/unnamed.png?1721961640",
+        "0xda9a0fbCE1b8b11fCbd8114354eC266594C0Ff5A":
+            "https://raw.githubusercontent.com/metrom-xyz/token-icons/master/icons/wsxeth.png",
     },
 });
 
