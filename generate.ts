@@ -137,6 +137,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/33033/standard/weETH.png?1701438396",
         "0x80137510979822322193FC997d400D5A6C747bf7":
             "https://assets.coingecko.com/coins/images/33103/standard/200_200.png?1702602672",
+        "0xd29687c813D741E2F938F4aC377128810E217b1b":
+            "https://assets.coingecko.com/coins/images/50571/standard/scroll.jpg?1728376125",
     },
 });
 
