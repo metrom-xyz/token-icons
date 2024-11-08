@@ -126,19 +126,19 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x19e26b0638bf63aa9fa4d14c6baf8d52ebe86c5c":
             "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
         "0x541FD749419CA806a8bc7da8ac23D346f2dF8B77":
-            "https://assets.coingecko.com/coins/images/36800/standard/solvBTC.png?1719810684",
+            "https://assets.coingecko.com/coins/images/36800/standard/solvBTC.png",
         "0xCC0966D8418d412c599A6421b760a847eB169A8c":
-            "https://assets.coingecko.com/coins/images/39384/standard/unnamed.png?1721961640",
+            "https://assets.coingecko.com/coins/images/39384/standard/unnamed.png",
         "0xda9a0fbCE1b8b11fCbd8114354eC266594C0Ff5A":
             selfHostedIconUrl("wsxeth.png"),
     },
     [SupportedMainnet.Scroll]: {
         "0x01f0a31698C4d065659b9bdC21B3610292a1c506":
-            "https://assets.coingecko.com/coins/images/33033/standard/weETH.png?1701438396",
+            "https://assets.coingecko.com/coins/images/33033/standard/weETH.png",
         "0x80137510979822322193FC997d400D5A6C747bf7":
-            "https://assets.coingecko.com/coins/images/33103/standard/200_200.png?1702602672",
+            "https://assets.coingecko.com/coins/images/33103/standard/200_200.png",
         "0xd29687c813D741E2F938F4aC377128810E217b1b":
-            "https://assets.coingecko.com/coins/images/50571/standard/scroll.jpg?1728376125",
+            "https://assets.coingecko.com/coins/images/50571/standard/scroll.jpg",
     },
 });
 
