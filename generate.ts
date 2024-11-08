@@ -44,6 +44,10 @@ function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
     );
 }
 
+function selfHostedIconUrl(name: string): string {
+    return `https://raw.githubusercontent.com/metrom-xyz/token-icons/master/icons/${name}`;
+}
+
 const testnetIcons: TokenIcons = lowercaseAddressKeys({
     [SupportedTestnet.Holesky]: {
         "0x94373a4919b3240d86ea41593d5eba789fef3848":
@@ -126,9 +130,14 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xCC0966D8418d412c599A6421b760a847eB169A8c":
             "https://assets.coingecko.com/coins/images/39384/standard/unnamed.png?1721961640",
         "0xda9a0fbCE1b8b11fCbd8114354eC266594C0Ff5A":
-            "https://raw.githubusercontent.com/metrom-xyz/token-icons/master/icons/wsxeth.png",
+            selfHostedIconUrl("wsxeth.png"),
     },
-    [SupportedMainnet.Scroll]: {},
+    [SupportedMainnet.Scroll]: {
+        "0x01f0a31698C4d065659b9bdC21B3610292a1c506":
+            "https://assets.coingecko.com/coins/images/33033/standard/weETH.png?1701438396",
+        "0x80137510979822322193FC997d400D5A6C747bf7":
+            "https://assets.coingecko.com/coins/images/33103/standard/200_200.png?1702602672",
+    },
 });
 
 const promises = TOKEN_LIST_URLS.map(async (url) => {
