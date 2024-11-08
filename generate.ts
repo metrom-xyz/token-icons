@@ -16,6 +16,7 @@ enum SupportedMainnet {
     Mantle = SupportedChain.Mantle,
     Base = SupportedChain.Base,
     Taiko = SupportedChain.Taiko,
+    Scroll = SupportedChain.Scroll,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -24,6 +25,7 @@ const TOKEN_LIST_URLS = [
     "https://raw.githubusercontent.com/ethereum-optimism/ethereum-optimism.github.io/refs/heads/master/optimism.tokenlist.json",
     "https://tokens.coingecko.com/uniswap/all.json",
     "https://raw.githubusercontent.com/mantlenetworkio/mantle-token-lists/refs/heads/main/mantle.tokenlist.json",
+    "https://raw.githubusercontent.com/scroll-tech/token-list/refs/heads/main/scroll.tokenlist.json",
 ];
 
 function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
@@ -126,6 +128,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xda9a0fbCE1b8b11fCbd8114354eC266594C0Ff5A":
             "https://raw.githubusercontent.com/metrom-xyz/token-icons/master/icons/wsxeth.png",
     },
+    [SupportedMainnet.Scroll]: {},
 });
 
 const promises = TOKEN_LIST_URLS.map(async (url) => {
