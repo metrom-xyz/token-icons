@@ -109,6 +109,12 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/37504/standard/kim.jpg",
         "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c":
             "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png",
+        "0xfde4c96c8593536e31f229ea8f37b2ada2699bb2":
+            "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
+        "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf":
+            "https://assets.coingecko.com/coins/images/40143/standard/cbbtc.webp",
+        "0x04d5ddf5f3a8939889f11e97f8c4bb48317f1938":
+            "https://assets.coingecko.com/coins/images/38039/standard/usdz-image-200x200.png",
     },
     [SupportedMainnet.Taiko]: {
         "0xA51894664A773981C6C112C43ce576f315d5b1B6":
