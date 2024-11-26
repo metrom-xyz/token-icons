@@ -9,6 +9,7 @@ enum SupportedTestnet {
     MantleSepolia = SupportedChain.MantleSepolia,
     SonicTestnet = SupportedChain.SonicTestnet,
     BaseSepolia = SupportedChain.BaseSepolia,
+    FormTestnet = SupportedChain.FormTestnet,
 }
 
 enum SupportedMainnet {
@@ -81,6 +82,12 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
     },
     [SupportedTestnet.SonicTestnet]: {},
     [SupportedTestnet.BaseSepolia]: {},
+    [SupportedTestnet.FormTestnet]: {
+        "0x0ccf417f00f6bc8345b0cec24ad2ece4699a7341": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+        "0xa65be6d7de4a82cc9638fb3dbf8e68b7f2e757ab": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x1e431c47a65c822d04f68058cbb9ff89eae976ce": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0xac96dbabb398ee0c49660049590a6e5527ae581f": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+    },
 });
 
 const mainnetIcons: TokenIcons = lowercaseAddressKeys({
