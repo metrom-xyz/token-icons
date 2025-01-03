@@ -125,7 +125,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x04d5ddf5f3a8939889f11e97f8c4bb48317f1938":
             "https://assets.coingecko.com/coins/images/38039/standard/usdz-image-200x200.png",
         "0x60a3e35cc302bfa44cb288bc5a4f316fdb1adb42":
-            "https://assets.coingecko.com/coins/images/26045/standard/euro.png?1696525125",
+            "https://assets.coingecko.com/coins/images/26045/standard/euro.png",
         "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376":
             "https://raw.githubusercontent.com/baseswapfi/default-token-list/fd33e52868f183d366054eaaf427a343c41ee9aa/images/USD+.svg",
     },
@@ -166,7 +166,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38": "https://assets.coingecko.com/coins/images/52857/standard/wrapped_sonic.png"
     },
     [SupportedMainnet.Arthera]: {
-        "0x69D349E2009Af35206EFc3937BaD6817424729F7": "https://assets.coingecko.com/coins/images/52395/standard/WhatsApp_Image_2024-11-14_at_21.49.11_a69eab26.jpg",
+        "0x69D349E2009Af35206EFc3937BaD6817424729F7": "https://cdn-api.jetadmin.app/media/static_files/projects/thirdfy/gradient_icon-9ea5488ba4533ed97dffec61a0ae5a0e_x8yevBB.svg",
         "0x6C45E28A76977a96e263f84F95912B47F927B687": "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
         "0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png"
     },
