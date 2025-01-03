@@ -7,7 +7,6 @@ enum SupportedTestnet {
     Holesky = SupportedChain.Holesky,
     CeloAlfajores = SupportedChain.CeloAlfajores,
     MantleSepolia = SupportedChain.MantleSepolia,
-    SonicTestnet = SupportedChain.SonicTestnet,
     BaseSepolia = SupportedChain.BaseSepolia,
     FormTestnet = SupportedChain.FormTestnet,
 }
@@ -18,6 +17,9 @@ enum SupportedMainnet {
     Base = SupportedChain.Base,
     Taiko = SupportedChain.Taiko,
     Scroll = SupportedChain.Scroll,
+    Sonic = SupportedChain.Sonic,
+    Arthera = SupportedChain.Arthera,
+    Form = SupportedChain.Form
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -80,7 +82,6 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xd1d3cf05ef211c71056f0af1a7fd1df989e109c3":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
     },
-    [SupportedTestnet.SonicTestnet]: {},
     [SupportedTestnet.BaseSepolia]: {},
     [SupportedTestnet.FormTestnet]: {
         "0x9a0ec2faf97986763605585700a18400fd5e8318": "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png",
@@ -158,6 +159,21 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xd29687c813D741E2F938F4aC377128810E217b1b":
             "https://assets.coingecko.com/coins/images/50571/standard/scroll.jpg",
     },
+    [SupportedMainnet.Sonic]: {
+        "0x309C92261178fA0CF748A855e90Ae73FDb79EBc7": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x29219dd400f2Bf60E5a23d13Be72B486D4038894": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0x29219dd400f2bf60e5a23d13be72b486d4038894": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38": "https://assets.coingecko.com/coins/images/52857/standard/wrapped_sonic.png"
+    },
+    [SupportedMainnet.Arthera]: {
+        "0x69D349E2009Af35206EFc3937BaD6817424729F7": "https://assets.coingecko.com/coins/images/52395/standard/WhatsApp_Image_2024-11-14_at_21.49.11_a69eab26.jpg",
+        "0x6C45E28A76977a96e263f84F95912B47F927B687": "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
+        "0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png"
+    },
+    [SupportedMainnet.Form]: {
+        "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0xFA3198ecF05303a6d96E57a45E6c815055D255b1": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
+    }
 });
 
 const promises = TOKEN_LIST_URLS.map(async (url) => {
