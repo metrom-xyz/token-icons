@@ -18,8 +18,8 @@ importers:
         specifier: ^9.17.0
         version: 9.17.0
       '@metrom-xyz/contracts':
-        specifier: ^0.35.0
-        version: 0.35.0(typescript@5.7.2)
+        specifier: ^0.37.0
+        version: 0.37.0(typescript@5.7.2)
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -340,8 +340,8 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
-  '@metrom-xyz/contracts@0.35.0':
-    resolution: {integrity: sha512-6fDxTWxnqCztY8AJioatz+yow7urMi0UpTKq538iX4yC06o5JXbxZlIA8tnP9FZf5Vy/P7ur2hBIWEG5Kt3wEg==}
+  '@metrom-xyz/contracts@0.37.0':
+    resolution: {integrity: sha512-SwM22PyQ6uqr1JTSItUwGsmUJKhGgjRHFU86pPyycy9dmFtFasLMOhgRbfJVFYeS9kppdU4LdJUmaSuXp5IJ6A==}
 
   '@noble/curves@1.7.0':
     resolution: {integrity: sha512-UTMhXK9SeDhFJVrHeUJ5uZlI6ajXg10O6Ddocf9S6GjbSBVZsJo88HzKwXznNfGpMTRDyJkqMjNDPYgf0qFWnw==}
@@ -1428,7 +1428,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@metrom-xyz/contracts@0.35.0(typescript@5.7.2)':
+  '@metrom-xyz/contracts@0.37.0(typescript@5.7.2)':
     dependencies:
       viem: 2.22.2(typescript@5.7.2)
     transitivePeerDependencies:

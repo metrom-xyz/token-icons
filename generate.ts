@@ -1,4 +1,4 @@
-import { type TokenList } from "@uniswap/token-lists";
+import { TokenInfo, type TokenList } from "@uniswap/token-lists";
 import { type Address } from "viem";
 import { writeFileSync } from "node:fs";
 import { SupportedChain } from "@metrom-xyz/contracts";
@@ -19,7 +19,8 @@ enum SupportedMainnet {
     Scroll = SupportedChain.Scroll,
     Sonic = SupportedChain.Sonic,
     Arthera = SupportedChain.Arthera,
-    Form = SupportedChain.Form
+    Form = SupportedChain.Form,
+    Gnosis = SupportedChain.Gnosis,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -29,6 +30,7 @@ const TOKEN_LIST_URLS = [
     "https://tokens.coingecko.com/uniswap/all.json",
     "https://raw.githubusercontent.com/mantlenetworkio/mantle-token-lists/refs/heads/main/mantle.tokenlist.json",
     "https://raw.githubusercontent.com/scroll-tech/token-list/refs/heads/main/scroll.tokenlist.json",
+    "https://bridge.gnosischain.com/api/tokens",
 ];
 
 function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
@@ -173,13 +175,14 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
     [SupportedMainnet.Form]: {
         "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
         "0xFA3198ecF05303a6d96E57a45E6c815055D255b1": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
-    }
+    },
+    [SupportedMainnet.Gnosis]: {},
 });
 
 const promises = TOKEN_LIST_URLS.map(async (url) => {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
-    return (await response.json()) as TokenList;
+    return (await response.json()) as TokenList | TokenInfo[];
 });
 
 const results = await Promise.allSettled(promises);
@@ -188,7 +191,9 @@ for (const result of results) {
     if (result.status === "rejected") {
         console.warn(`Could not fetch token list: ${result.reason}`);
     } else {
-        for (const token of result.value.tokens) {
+        for (const token of "tokens" in result.value
+            ? result.value.tokens
+            : result.value) {
             if (!token.logoURI) continue;
 
             let list;
