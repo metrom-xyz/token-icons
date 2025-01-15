@@ -86,11 +86,16 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
     },
     [SupportedTestnet.BaseSepolia]: {},
     [SupportedTestnet.FormTestnet]: {
-        "0x9a0ec2faf97986763605585700a18400fd5e8318": "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png",
-        "0x0ccf417f00f6bc8345b0cec24ad2ece4699a7341": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
-        "0xa65be6d7de4a82cc9638fb3dbf8e68b7f2e757ab": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-        "0x1e431c47a65c822d04f68058cbb9ff89eae976ce": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-        "0xac96dbabb398ee0c49660049590a6e5527ae581f": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+        "0x9a0ec2faf97986763605585700a18400fd5e8318":
+            "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png",
+        "0x0ccf417f00f6bc8345b0cec24ad2ece4699a7341":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
+        "0xa65be6d7de4a82cc9638fb3dbf8e68b7f2e757ab":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x1e431c47a65c822d04f68058cbb9ff89eae976ce":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
+        "0xac96dbabb398ee0c49660049590a6e5527ae581f":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
     },
 });
 
@@ -162,19 +167,32 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/50571/standard/scroll.jpg",
     },
     [SupportedMainnet.Sonic]: {
-        "0x309C92261178fA0CF748A855e90Ae73FDb79EBc7": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-        "0x29219dd400f2Bf60E5a23d13Be72B486D4038894": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
-        "0x29219dd400f2bf60e5a23d13be72b486d4038894": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
-        "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38": "https://assets.coingecko.com/coins/images/52857/standard/wrapped_sonic.png"
+        "0x309C92261178fA0CF748A855e90Ae73FDb79EBc7":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x29219dd400f2Bf60E5a23d13Be72B486D4038894":
+            "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0x29219dd400f2bf60e5a23d13be72b486d4038894":
+            "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38":
+            "https://assets.coingecko.com/coins/images/52857/standard/wrapped_sonic.png",
     },
     [SupportedMainnet.Arthera]: {
-        "0x69D349E2009Af35206EFc3937BaD6817424729F7": "https://cdn-api.jetadmin.app/media/static_files/projects/thirdfy/gradient_icon-9ea5488ba4533ed97dffec61a0ae5a0e_x8yevBB.svg",
-        "0x6C45E28A76977a96e263f84F95912B47F927B687": "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
-        "0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png"
+        "0x69D349E2009Af35206EFc3937BaD6817424729F7":
+            "https://cdn-api.jetadmin.app/media/static_files/projects/thirdfy/gradient_icon-9ea5488ba4533ed97dffec61a0ae5a0e_x8yevBB.svg",
+        "0x6C45E28A76977a96e263f84F95912B47F927B687":
+            "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
+        "0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B":
+            "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
     },
     [SupportedMainnet.Form]: {
-        "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D": "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
-        "0xFA3198ecF05303a6d96E57a45E6c815055D255b1": "https://assets.coingecko.com/coins/images/325/standard/Tether.png"
+        "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D":
+            "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0xFA3198ecF05303a6d96E57a45E6c815055D255b1":
+            "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
+        "0x96D51cc3f7500d501bAeB1A2a62BB96fa03532F8":
+            "https://assets.coingecko.com/coins/images/51063/standard/Gaming_Agent_1fe70d54ba.jpg?1729925539",
+        "0x40Ca4155c0334F7e0F6d7F80536B59EF8831c9fb":
+            "https://assets.coingecko.com/coins/images/51784/standard/3.png?1731981138",
     },
     [SupportedMainnet.Gnosis]: {},
 });
