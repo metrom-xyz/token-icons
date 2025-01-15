@@ -158,7 +158,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c":
             "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png",
         "0xfde4c96c8593536e31f229ea8f37b2ada2699bb2":
-            "https://assets.coingecko.com/coins/images/325/small/Tether-logo.png",
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0xcbb7c0000ab88b473b1f5afd9ef808440eed33bf":
             "https://assets.coingecko.com/coins/images/40143/standard/cbbtc.webp",
         "0x04d5ddf5f3a8939889f11e97f8c4bb48317f1938":
@@ -212,7 +212,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x69D349E2009Af35206EFc3937BaD6817424729F7":
             "https://cdn-api.jetadmin.app/media/static_files/projects/thirdfy/gradient_icon-9ea5488ba4533ed97dffec61a0ae5a0e_x8yevBB.svg",
         "0x6C45E28A76977a96e263f84F95912B47F927B687":
-            "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B":
             "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
     },
@@ -220,7 +220,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D":
             "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
         "0xFA3198ecF05303a6d96E57a45E6c815055D255b1":
-            "https://assets.coingecko.com/coins/images/325/standard/Tether.png",
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0x96D51cc3f7500d501bAeB1A2a62BB96fa03532F8":
             "https://assets.coingecko.com/coins/images/51063/standard/Gaming_Agent_1fe70d54ba.jpg?1729925539",
         "0x40Ca4155c0334F7e0F6d7F80536B59EF8831c9fb":
