@@ -225,6 +225,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/51063/standard/Gaming_Agent_1fe70d54ba.jpg?1729925539",
         "0x40Ca4155c0334F7e0F6d7F80536B59EF8831c9fb":
             "https://assets.coingecko.com/coins/images/51784/standard/3.png?1731981138",
+        "0xb1b812b664c28E1bA1d35De925Ae88b7Bc7cdCF5":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     },
     [SupportedMainnet.Gnosis]: {},
 });
