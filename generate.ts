@@ -25,13 +25,45 @@ enum SupportedMainnet {
 
 type TokenIcons = Record<number, Record<Address, string>>;
 
-const TOKEN_LIST_URLS = [
-    "https://raw.githubusercontent.com/ethereum-optimism/ethereum-optimism.github.io/refs/heads/master/optimism.tokenlist.json",
-    "https://tokens.coingecko.com/uniswap/all.json",
-    "https://raw.githubusercontent.com/mantlenetworkio/mantle-token-lists/refs/heads/main/mantle.tokenlist.json",
-    "https://raw.githubusercontent.com/scroll-tech/token-list/refs/heads/main/scroll.tokenlist.json",
-    "https://bridge.gnosischain.com/api/tokens",
-];
+async function fullTokenListExtractor(url: string): Promise<TokenInfo[]> {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
+    const list = (await response.json()) as TokenList;
+    return list.tokens;
+}
+
+async function rawTokensListExtractor(url: string): Promise<TokenInfo[]> {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
+    return (await response.json()) as TokenInfo[];
+}
+
+async function formTokensListExtractor(url: string): Promise<TokenInfo[]> {
+    const response = await fetch(url, {
+        headers: {
+            Origin: "https://bridge.form.network",
+        },
+    });
+    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
+    const list = (await response.json()) as Record<number, TokenInfo>[];
+    return list.flatMap((item) => Object.values(item));
+}
+
+const TOKEN_LIST_EXTRACTORS: Record<
+    string,
+    (url: string) => Promise<TokenInfo[]>
+> = {
+    "https://raw.githubusercontent.com/ethereum-optimism/ethereum-optimism.github.io/refs/heads/master/optimism.tokenlist.json":
+        fullTokenListExtractor,
+    "https://tokens.coingecko.com/uniswap/all.json": fullTokenListExtractor,
+    "https://raw.githubusercontent.com/mantlenetworkio/mantle-token-lists/refs/heads/main/mantle.tokenlist.json":
+        fullTokenListExtractor,
+    "https://raw.githubusercontent.com/scroll-tech/token-list/refs/heads/main/scroll.tokenlist.json":
+        fullTokenListExtractor,
+    "https://bridge.gnosischain.com/api/tokens": rawTokensListExtractor,
+    "https://api.superbridge.app/api/bridge/tokens/bridge.form.network":
+        formTokensListExtractor,
+};
 
 function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
     return Object.entries(icons).reduce(
@@ -197,11 +229,11 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
     [SupportedMainnet.Gnosis]: {},
 });
 
-const promises = TOKEN_LIST_URLS.map(async (url) => {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
-    return (await response.json()) as TokenList | TokenInfo[];
-});
+const promises = Object.entries(TOKEN_LIST_EXTRACTORS).map(
+    async ([url, extractor]) => {
+        return await extractor(url);
+    },
+);
 
 const results = await Promise.allSettled(promises);
 
@@ -209,9 +241,7 @@ for (const result of results) {
     if (result.status === "rejected") {
         console.warn(`Could not fetch token list: ${result.reason}`);
     } else {
-        for (const token of "tokens" in result.value
-            ? result.value.tokens
-            : result.value) {
+        for (const token of result.value) {
             if (!token.logoURI) continue;
 
             let list;
