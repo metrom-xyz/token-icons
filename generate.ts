@@ -105,6 +105,8 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
         "0x4d5627c9f87b094a0a78a9fed0027e1a701be0ea":
             "https://assets.coingecko.com/coins/images/18834/standard/wstETH.png",
+        "0xa80a089de4720f8cffa34dac70f6b648832a0ddb":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
     },
     [SupportedTestnet.CeloAlfajores]: {
         "0xf194afdf50b03e69bd7d057c1aa9e10c9954e4c9":
