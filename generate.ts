@@ -5,6 +5,7 @@ import { SupportedChain } from "@metrom-xyz/contracts";
 
 enum SupportedTestnet {
     Holesky = SupportedChain.Holesky,
+    Sepolia = SupportedChain.Sepolia,
     CeloAlfajores = SupportedChain.CeloAlfajores,
     MantleSepolia = SupportedChain.MantleSepolia,
     BaseSepolia = SupportedChain.BaseSepolia,
@@ -18,7 +19,6 @@ enum SupportedMainnet {
     Taiko = SupportedChain.Taiko,
     Scroll = SupportedChain.Scroll,
     Sonic = SupportedChain.Sonic,
-    Arthera = SupportedChain.Arthera,
     Form = SupportedChain.Form,
     Gnosis = SupportedChain.Gnosis,
 }
@@ -97,6 +97,14 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0x13c75ad40d4d30e5c057c3db52e74fdc0691f589":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    },
+    [SupportedTestnet.Sepolia]: {
+        "0x10f8d8422a36ba75ae3381815ea72638dda0088c":
+            "https://assets.coingecko.com/coins/images/20764/standard/reth.png",
+        "0x2442ca14d1217b4dd503e47dfdf79b774b56ea89":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x4d5627c9f87b094a0a78a9fed0027e1a701be0ea":
+            "https://assets.coingecko.com/coins/images/18834/standard/wstETH.png",
     },
     [SupportedTestnet.CeloAlfajores]: {
         "0xf194afdf50b03e69bd7d057c1aa9e10c9954e4c9":
@@ -207,14 +215,6 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
         "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38":
             "https://assets.coingecko.com/coins/images/52857/standard/wrapped_sonic.png",
-    },
-    [SupportedMainnet.Arthera]: {
-        "0x69D349E2009Af35206EFc3937BaD6817424729F7":
-            "https://cdn-api.jetadmin.app/media/static_files/projects/thirdfy/gradient_icon-9ea5488ba4533ed97dffec61a0ae5a0e_x8yevBB.svg",
-        "0x6C45E28A76977a96e263f84F95912B47F927B687":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
-        "0x8C4aCd74Ff4385f3B7911432FA6787Aa14406f8B":
-            "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
     },
     [SupportedMainnet.Form]: {
         "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D":
