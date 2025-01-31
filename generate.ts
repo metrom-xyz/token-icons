@@ -99,6 +99,8 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
     [SupportedTestnet.Sepolia]: {
+        "0xb01d32c05f4aa066eef2bfd4d461833fddd56d0a":
+            "https://assets.coingecko.com/coins/images/53755/standard/BOLD_logo.png",
         "0x10f8d8422a36ba75ae3381815ea72638dda0088c":
             "https://assets.coingecko.com/coins/images/20764/standard/reth.png",
         "0x2442ca14d1217b4dd503e47dfdf79b774b56ea89":
