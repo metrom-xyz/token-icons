@@ -219,6 +219,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
         "0x039e2fb66102314ce7b64ce5ce3e5183bc94ad38":
             "https://assets.coingecko.com/coins/images/52857/standard/wrapped_sonic.png",
+        "0x2fb960611bdc322a9a4a994252658cae9fe2eea1":
+            "https://assets.coingecko.com/coins/images/12504/standard/uniswap-logo.png",
     },
     [SupportedMainnet.Form]: {
         "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D":
