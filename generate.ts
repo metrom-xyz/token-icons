@@ -179,6 +179,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/26045/standard/euro.png",
         "0xb79dd08ea68a908a97220c76d19a6aa9cbde4376":
             "https://raw.githubusercontent.com/baseswapfi/default-token-list/fd33e52868f183d366054eaaf427a343c41ee9aa/images/USD+.svg",
+        "0xd5046b976188eb40f6de40fb527f89c05b323385":
+            "https://assets.coingecko.com/coins/images/31419/standard/bsxlogo.png?1696530234",
     },
     [SupportedMainnet.Taiko]: {
         "0xA51894664A773981C6C112C43ce576f315d5b1B6":
