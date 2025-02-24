@@ -21,6 +21,8 @@ enum SupportedMainnet {
     Sonic = SupportedChain.Sonic,
     Form = SupportedChain.Form,
     Gnosis = SupportedChain.Gnosis,
+    // TODO: replace with SupportedChain variant as soon as it is available
+    Telos = 40,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -49,6 +51,33 @@ async function formTokensListExtractor(url: string): Promise<TokenInfo[]> {
     return list.flatMap((item) => Object.values(item));
 }
 
+interface TelosToken {
+    chainKey: string;
+    decimals: number;
+    symbol: string;
+    name: string;
+    address: string | null;
+    icon: string;
+}
+
+async function telosTokensListExtractor(url: string): Promise<TokenInfo[]> {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
+    const list = (await response.json()) as {
+        result: { data: TelosToken[] };
+    };
+    const tokens = [];
+    for (const token of list.result.data) {
+        if (token.chainKey !== "telos" || !token.address) continue;
+        tokens.push(<TokenInfo>{
+            chainId: 40, // telos' chain id from chainlist
+            address: token.address,
+            logoURI: token.icon,
+        });
+    }
+    return tokens;
+}
+
 const TOKEN_LIST_EXTRACTORS: Record<
     string,
     (url: string) => Promise<TokenInfo[]>
@@ -63,6 +92,7 @@ const TOKEN_LIST_EXTRACTORS: Record<
     "https://bridge.gnosischain.com/api/tokens": rawTokensListExtractor,
     "https://api.superbridge.app/api/bridge/tokens/bridge.form.network":
         formTokensListExtractor,
+    "https://bridge.telos.net/api/trpc/tokens": telosTokensListExtractor,
 };
 
 function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
