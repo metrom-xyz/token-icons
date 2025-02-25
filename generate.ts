@@ -7,9 +7,7 @@ enum SupportedTestnet {
     Holesky = SupportedChain.Holesky,
     Sepolia = SupportedChain.Sepolia,
     CeloAlfajores = SupportedChain.CeloAlfajores,
-    MantleSepolia = SupportedChain.MantleSepolia,
     BaseSepolia = SupportedChain.BaseSepolia,
-    FormTestnet = SupportedChain.FormTestnet,
 }
 
 enum SupportedMainnet {
@@ -21,8 +19,7 @@ enum SupportedMainnet {
     Sonic = SupportedChain.Sonic,
     Form = SupportedChain.Form,
     Gnosis = SupportedChain.Gnosis,
-    // TODO: replace with SupportedChain variant as soon as it is available
-    Telos = 40,
+    Telos = SupportedChain.Telos,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -150,27 +147,7 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x22d8655b405f6a8d6bb7c5838aaf187a32158b07":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
     },
-    [SupportedTestnet.MantleSepolia]: {
-        "0xb1eda18c1b730a973dac2ec37cfd5685d7de10dd":
-            "https://assets.coingecko.com/coins/images/30980/standard/token-logo.png",
-        "0xc8e265d4c037b0e0641c84b440ab260f4fdafd24":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-        "0xd1d3cf05ef211c71056f0af1a7fd1df989e109c3":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
-    },
     [SupportedTestnet.BaseSepolia]: {},
-    [SupportedTestnet.FormTestnet]: {
-        "0x9a0ec2faf97986763605585700a18400fd5e8318":
-            "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png",
-        "0x0ccf417f00f6bc8345b0cec24ad2ece4699a7341":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
-        "0xa65be6d7de4a82cc9638fb3dbf8e68b7f2e757ab":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-        "0x1e431c47a65c822d04f68058cbb9ff89eae976ce":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-        "0xac96dbabb398ee0c49660049590a6e5527ae581f":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-    },
 });
 
 const mainnetIcons: TokenIcons = lowercaseAddressKeys({
@@ -267,6 +244,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     },
     [SupportedMainnet.Gnosis]: {},
+    [SupportedChain.Telos]: {
+        "0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E":
+            "https://assets.coingecko.com/coins/images/23952/standard/tlos_png.png",
+    },
 });
 
 const promises = Object.entries(TOKEN_LIST_EXTRACTORS).map(
