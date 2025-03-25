@@ -239,7 +239,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E":
             "https://assets.coingecko.com/coins/images/23952/standard/tlos_png.png",
     },
-    [SupportedChain.LightLinkPhoenix]: {},
+    [SupportedChain.LightLinkPhoenix]: {
+        "0x808d7c71ad2ba3FA531b068a2417C63106BC0949":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    },
 });
 
 const promises = Object.entries(TOKEN_LIST_EXTRACTORS).map(
