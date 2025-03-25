@@ -240,8 +240,9 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
     },
     [SupportedChain.LightLinkPhoenix]: {
         "0x7ebef2a4b1b09381ec5b9df8c5c6f2dbeca59c73": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0xd9d7123552fa2bedb2348bb562576d67f6e8e96e": "https://cdn.oku.trade/logos/1890/0xd9d7123552fa2bedb2348bb562576d67f6e8e96e.png",
+        "0x808d7c71ad2ba3FA531b068a2417C63106BC0949": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0xbcf8c1b03bbdda88d579330bdf236b58f8bb2cfd": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/logo.png",
-        "0xd9d7123552fa2bedb2348bb562576d67f6e8e96e": "https://cdn.oku.trade/logos/1890/0xd9d7123552fa2bedb2348bb562576d67f6e8e96e.png"
     }
 });
 
