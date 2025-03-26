@@ -161,6 +161,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
     [SupportedMainnet.Base]: {
+        "0x4200000000000000000000000000000000000006":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
         "0x5dC25aA049837B696d1dc0F966aC8DF1491f819B":
             "https://assets.coingecko.com/coins/images/37504/standard/kim.jpg",
         "0x7B8C5d97c25B65f89817E8046851A32e963fc9cD":
@@ -240,6 +242,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/23952/standard/tlos_png.png",
     },
     [SupportedChain.LightLinkPhoenix]: {
+        "0x7ebef2a4b1b09381ec5b9df8c5c6f2dbeca59c73":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
         "0x808d7c71ad2ba3FA531b068a2417C63106BC0949":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
