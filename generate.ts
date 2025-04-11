@@ -244,6 +244,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
     },
     [SupportedMainnet.Gnosis]: {},
     [SupportedChain.Telos]: {
+        "0x8f7d64ea96d729ef24a0f30b4526d47b80d877b9":
+            selfHostedIconUrl("usdm.png"),
         "0x674843c06ff83502ddb4d37c2e09c01cda38cbc8":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E":
