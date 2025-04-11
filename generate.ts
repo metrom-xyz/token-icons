@@ -244,6 +244,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
     },
     [SupportedMainnet.Gnosis]: {},
     [SupportedChain.Telos]: {
+        "0x674843c06ff83502ddb4d37c2e09c01cda38cbc8":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E":
             "https://assets.coingecko.com/coins/images/23952/standard/tlos_png.png",
     },
