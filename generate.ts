@@ -89,7 +89,9 @@ const TOKEN_LIST_EXTRACTORS: Record<
     "https://bridge.gnosischain.com/api/tokens": rawTokensListExtractor,
     "https://api.superbridge.app/api/bridge/tokens/bridge.form.network":
         formTokensListExtractor,
-    "https://bridge.telos.net/api/trpc/tokens": telosTokensListExtractor,
+    // FIXME: list not working (could be a temporary issue)
+    // "https://bridge.telos.net/api/trpc/tokens": telosTokensListExtractor,
+    "https://bridgev1.telos.net/api/trpc/tokens": telosTokensListExtractor,
     "https://cdn.oku.trade/tokenlist.json": fullTokenListExtractor,
 };
 
@@ -137,6 +139,10 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/18834/standard/wstETH.png",
         "0xa80a089de4720f8cffa34dac70f6b648832a0ddb":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png",
+        "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x779877a7b0d9e8603169ddbd7836e478b4624789":
+            "https://assets.coingecko.com/coins/images/877/standard/chainlink-new-logo.png",
     },
     [SupportedTestnet.BaseSepolia]: {},
 });
@@ -238,6 +244,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
     },
     [SupportedMainnet.Gnosis]: {},
     [SupportedChain.Telos]: {
+        "0x674843c06ff83502ddb4d37c2e09c01cda38cbc8":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E":
             "https://assets.coingecko.com/coins/images/23952/standard/tlos_png.png",
     },
