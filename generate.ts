@@ -211,6 +211,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             selfHostedIconUrl("wsxeth.png"),
     },
     [SupportedMainnet.Scroll]: {
+        "0x5300000000000000000000000000000000000004":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
         "0x01f0a31698C4d065659b9bdC21B3610292a1c506":
             "https://assets.coingecko.com/coins/images/33033/standard/weETH.png",
         "0x80137510979822322193FC997d400D5A6C747bf7":
