@@ -7,6 +7,9 @@ enum SupportedTestnet {
     Holesky = SupportedChain.Holesky,
     Sepolia = SupportedChain.Sepolia,
     BaseSepolia = SupportedChain.BaseSepolia,
+    // TODO: this is temporary as we are testing Carbon on Sei on dev,
+    // remove this as soon as that is done
+    Sei = SupportedChain.Sei,
 }
 
 enum SupportedMainnet {
