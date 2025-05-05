@@ -202,6 +202,11 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/877/standard/chainlink-new-logo.png",
     },
     [SupportedTestnet.BaseSepolia]: {},
+    // TODO: remove this once Carbon has been tested and released
+    [SupportedTestnet.Sei]: {
+        "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee":
+            "https://raw.githubusercontent.com/Seitrace/sei-assetlist/main/images/Sei.png",
+    },
 });
 
 const mainnetIcons: TokenIcons = lowercaseAddressKeys({
