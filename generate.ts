@@ -313,6 +313,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x808d7c71ad2ba3FA531b068a2417C63106BC0949":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
+    [SupportedChain.Sei]: {
+        "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee":
+            "https://raw.githubusercontent.com/Seitrace/sei-assetlist/main/images/Sei.png",
+    },
 });
 
 const promises = Object.entries(TOKEN_LIST_EXTRACTORS).map(
