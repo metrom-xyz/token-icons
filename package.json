@@ -13,19 +13,19 @@
     "devDependencies": {
         "@commitlint/cli": "^19.8.0",
         "@commitlint/config-conventional": "^19.8.0",
-        "@eslint/js": "^9.24.0",
-        "@metrom-xyz/contracts": "^0.43.0",
+        "@eslint/js": "^9.26.0",
+        "@metrom-xyz/contracts": "^0.44.0",
         "@tsconfig/node20": "^20.1.5",
-        "@types/node": "^22.14.0",
+        "@types/node": "^22.15.3",
         "@uniswap/token-lists": "1.0.0-beta.34",
-        "eslint": "^9.24.0",
+        "eslint": "^9.26.0",
         "eslint-config-prettier": "^10.1.2",
-        "eslint-plugin-prettier": "^5.2.6",
+        "eslint-plugin-prettier": "^5.3.1",
         "husky": "^9.1.7",
         "prettier": "^3.5.3",
-        "tsx": "^4.19.3",
+        "tsx": "^4.19.4",
         "typescript": "^5.8.3",
-        "typescript-eslint": "^8.29.1",
-        "viem": "^2.26.2"
+        "typescript-eslint": "^8.31.1",
+        "viem": "^2.28.4"
     }
 }

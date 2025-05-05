@@ -20,6 +20,7 @@ enum SupportedMainnet {
     Gnosis = SupportedChain.Gnosis,
     Telos = SupportedChain.Telos,
     LightLinkPhoenix = SupportedChain.LightLinkPhoenix,
+    Sei = SupportedChain.Sei,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -75,6 +76,57 @@ async function telosTokensListExtractor(url: string): Promise<TokenInfo[]> {
     return tokens;
 }
 
+interface SeiToken {
+    symbol: string;
+    name: string;
+    base: string;
+    denom_units: { denom: string; exponent: number }[];
+    images: { png?: string; svg?: string };
+}
+
+async function seiTokensListExtractor(url: string): Promise<TokenInfo[]> {
+    const response = await fetch(url, {
+        headers: {
+            Origin: "https://raw.githubusercontent.com/Seitrace/sei-assetlist/refs/heads/main/assetlist.json",
+        },
+    });
+    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
+    const list = (await response.json()) as Record<string, SeiToken[]>;
+    const tokens = list["pacific-1"];
+
+    const out: TokenInfo[] = [];
+    for (const token of tokens) {
+        const denomUnit = token.denom_units.find(
+            (item) => item.denom.toLowerCase() === token.symbol.toLowerCase(),
+        );
+        if (!denomUnit) {
+            console.warn(
+                `Could not resolve decimals for token ${token.symbol} on Sei, skipping`,
+            );
+            continue;
+        }
+
+        const logoURI = token.images["svg"] || token.images["png"];
+        if (!logoURI) {
+            console.warn(
+                `Could not resolve logo URI for token ${token.symbol} on Sei, skipping`,
+            );
+            continue;
+        }
+
+        out.push({
+            chainId: SupportedChain.Sei,
+            address: token.base,
+            name: token.name,
+            symbol: token.symbol,
+            decimals: denomUnit.exponent,
+            logoURI,
+        });
+    }
+
+    return out;
+}
+
 const TOKEN_LIST_EXTRACTORS: Record<
     string,
     (url: string) => Promise<TokenInfo[]>
@@ -93,6 +145,8 @@ const TOKEN_LIST_EXTRACTORS: Record<
     // "https://bridge.telos.net/api/trpc/tokens": telosTokensListExtractor,
     "https://bridgev1.telos.net/api/trpc/tokens": telosTokensListExtractor,
     "https://cdn.oku.trade/tokenlist.json": fullTokenListExtractor,
+    "https://raw.githubusercontent.com/Seitrace/sei-assetlist/refs/heads/main/assetlist.json":
+        seiTokensListExtractor,
 };
 
 function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
