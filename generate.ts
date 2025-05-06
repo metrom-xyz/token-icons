@@ -281,6 +281,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/33103/standard/200_200.png",
         "0xd29687c813D741E2F938F4aC377128810E217b1b":
             "https://assets.coingecko.com/coins/images/50571/standard/scroll.jpg",
+        "0x6F2A1A886Dbf8E36C4fa9F25a517861A930fBF3A":
+            selfHostedIconUrl("usdq.svg"),
     },
     [SupportedMainnet.Sonic]: {
         "0x309C92261178fA0CF748A855e90Ae73FDb79EBc7":
