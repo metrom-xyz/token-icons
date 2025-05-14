@@ -10,6 +10,9 @@ enum SupportedTestnet {
     // TODO: this is temporary as we are testing Carbon on Sei on dev,
     // remove this as soon as that is done
     Sei = SupportedChain.Sei,
+    // TODO: this is temporary as we are testing Velodrome on Swell on dev,
+    // remove this as soon as that is done
+    Swell = SupportedChain.Swell,
 }
 
 enum SupportedMainnet {
@@ -24,6 +27,7 @@ enum SupportedMainnet {
     Telos = SupportedChain.Telos,
     LightLinkPhoenix = SupportedChain.LightLinkPhoenix,
     Sei = SupportedChain.Sei,
+    Swell = SupportedChain.Swell,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -45,6 +49,17 @@ async function formTokensListExtractor(url: string): Promise<TokenInfo[]> {
     const response = await fetch(url, {
         headers: {
             Origin: "https://bridge.form.network",
+        },
+    });
+    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
+    const list = (await response.json()) as Record<number, TokenInfo>[];
+    return list.flatMap((item) => Object.values(item));
+}
+
+async function swellTokensListExtractor(url: string): Promise<TokenInfo[]> {
+    const response = await fetch(url, {
+        headers: {
+            Origin: "https://superbridge.swellnetwork.io",
         },
     });
     if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
@@ -150,6 +165,8 @@ const TOKEN_LIST_EXTRACTORS: Record<
     "https://cdn.oku.trade/tokenlist.json": fullTokenListExtractor,
     "https://raw.githubusercontent.com/Seitrace/sei-assetlist/refs/heads/main/assetlist.json":
         seiTokensListExtractor,
+    "https://api.superbridge.app/api/v2/bridge/paid_deployment_tokens/676fad03-4ddc-40d1-882c-d8543cd0458d":
+        swellTokensListExtractor,
 };
 
 function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
@@ -206,6 +223,13 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
     [SupportedTestnet.Sei]: {
         "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee":
             "https://raw.githubusercontent.com/Seitrace/sei-assetlist/main/images/Sei.png",
+    },
+    // TODO: remove this once Velodrome has been tested and released
+    [SupportedMainnet.Swell]: {
+        "0x4200000000000000000000000000000000000006":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x0000baa0b1678229863c0a941c1056b83a1955f5":
+            selfHostedIconUrl("usdk.png"),
     },
 });
 
@@ -309,7 +333,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     },
     [SupportedMainnet.Gnosis]: {},
-    [SupportedChain.Telos]: {
+    [SupportedMainnet.Telos]: {
         "0x8f7d64ea96d729ef24a0f30b4526d47b80d877b9":
             selfHostedIconUrl("usdm.png"),
         "0x674843c06ff83502ddb4d37c2e09c01cda38cbc8":
@@ -317,15 +341,23 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E":
             "https://assets.coingecko.com/coins/images/23952/standard/tlos_png.png",
     },
-    [SupportedChain.LightLinkPhoenix]: {
+    [SupportedMainnet.LightLinkPhoenix]: {
         "0x7ebef2a4b1b09381ec5b9df8c5c6f2dbeca59c73":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
         "0x808d7c71ad2ba3FA531b068a2417C63106BC0949":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
-    [SupportedChain.Sei]: {
+    [SupportedMainnet.Sei]: {
         "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee":
             "https://raw.githubusercontent.com/Seitrace/sei-assetlist/main/images/Sei.png",
+        "0xb75d0b03c06a926e488e2659df1a861f860bd3d1":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    },
+    [SupportedMainnet.Swell]: {
+        "0x4200000000000000000000000000000000000006":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x0000baa0b1678229863c0a941c1056b83a1955f5":
+            selfHostedIconUrl("usdk.png"),
     },
 });
 
