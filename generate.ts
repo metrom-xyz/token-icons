@@ -10,9 +10,6 @@ enum SupportedTestnet {
     // TODO: this is temporary as we are testing Carbon on Sei on dev,
     // remove this as soon as that is done
     Sei = SupportedChain.Sei,
-    // TODO: this is temporary as we are testing Velodrome on Swell on dev,
-    // remove this as soon as that is done
-    Swell = SupportedChain.Swell,
 }
 
 enum SupportedMainnet {
@@ -223,13 +220,6 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
     [SupportedTestnet.Sei]: {
         "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee":
             "https://raw.githubusercontent.com/Seitrace/sei-assetlist/main/images/Sei.png",
-    },
-    // TODO: remove this once Velodrome has been tested and released
-    [SupportedMainnet.Swell]: {
-        "0x4200000000000000000000000000000000000006":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
-        "0x0000baa0b1678229863c0a941c1056b83a1955f5":
-            selfHostedIconUrl("usdk.png"),
     },
 });
 
