@@ -370,20 +370,23 @@ for (const result of results) {
         console.warn(`Could not fetch token list: ${result.reason}`);
     } else {
         for (const token of result.value) {
-            if (!token.logoURI) continue;
-
-            let list;
-            if (token.chainId in SupportedTestnet) list = testnetIcons;
-            else if (token.chainId in SupportedMainnet) list = mainnetIcons;
-            else continue;
-
-            const tokenKey = token.address.toLowerCase() as Address;
-            if (!list[token.chainId]) list[token.chainId] = {};
-            if (list[token.chainId][tokenKey]) continue;
-
-            list[token.chainId][tokenKey] = token.logoURI;
+            if (token.chainId in SupportedTestnet)
+                insertTokenInList(testnetIcons, token);
+            if (token.chainId in SupportedMainnet)
+                insertTokenInList(mainnetIcons, token);
         }
     }
+}
+
+function insertTokenInList(list: TokenIcons, token: TokenInfo) {
+    if (!token.logoURI) return;
+
+    const tokenKey = token.address.toLowerCase() as Address;
+
+    if (!list[token.chainId]) list[token.chainId] = {};
+    if (list[token.chainId][tokenKey]) return;
+
+    list[token.chainId][tokenKey] = token.logoURI;
 }
 
 writeFileSync("./testnet-icons.json", JSON.stringify(testnetIcons));
