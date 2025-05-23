@@ -7,9 +7,10 @@ enum SupportedTestnet {
     Holesky = SupportedChain.Holesky,
     Sepolia = SupportedChain.Sepolia,
     BaseSepolia = SupportedChain.BaseSepolia,
-    // TODO: this is temporary as we are testing Carbon on Sei on dev,
+    // TODO: these are temporary as we are testing Carbon on Sei on dev,
     // remove this as soon as that is done
     Sei = SupportedChain.Sei,
+    Hemi = SupportedChain.Hemi,
 }
 
 enum SupportedMainnet {
@@ -25,6 +26,7 @@ enum SupportedMainnet {
     LightLinkPhoenix = SupportedChain.LightLinkPhoenix,
     Sei = SupportedChain.Sei,
     Swell = SupportedChain.Swell,
+    Hemi = SupportedChain.Hemi,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -164,6 +166,8 @@ const TOKEN_LIST_EXTRACTORS: Record<
         seiTokensListExtractor,
     "https://api.superbridge.app/api/v2/bridge/paid_deployment_tokens/676fad03-4ddc-40d1-882c-d8543cd0458d":
         swellTokensListExtractor,
+    "https://raw.githubusercontent.com/hemilabs/token-list/refs/heads/master/src/hemi.tokenlist.json":
+        fullTokenListExtractor,
 };
 
 function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
@@ -216,11 +220,12 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/877/standard/chainlink-new-logo.png",
     },
     [SupportedTestnet.BaseSepolia]: {},
-    // TODO: remove this once Carbon has been tested and released
+    // TODO: remove these once Carbon has been tested and released
     [SupportedTestnet.Sei]: {
         "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee":
             "https://raw.githubusercontent.com/Seitrace/sei-assetlist/main/images/Sei.png",
     },
+    [SupportedChain.Hemi]: {},
 });
 
 const mainnetIcons: TokenIcons = lowercaseAddressKeys({
@@ -349,6 +354,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x0000baa0b1678229863c0a941c1056b83a1955f5":
             selfHostedIconUrl("usdk.png"),
     },
+    [SupportedChain.Hemi]: {},
 });
 
 const promises = Object.entries(TOKEN_LIST_EXTRACTORS).map(
