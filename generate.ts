@@ -224,6 +224,8 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
     [SupportedTestnet.Sei]: {
         "0xeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee":
             "https://raw.githubusercontent.com/Seitrace/sei-assetlist/main/images/Sei.png",
+        "0xb75d0b03c06a926e488e2659df1a861f860bd3d1":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
     [SupportedChain.Hemi]: {},
 });
