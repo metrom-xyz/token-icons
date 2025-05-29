@@ -354,7 +354,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x0000baa0b1678229863c0a941c1056b83a1955f5":
             selfHostedIconUrl("usdk.png"),
     },
-    [SupportedChain.Hemi]: {},
+    [SupportedChain.Hemi]: {
+        "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    },
 });
 
 const promises = Object.entries(TOKEN_LIST_EXTRACTORS).map(
