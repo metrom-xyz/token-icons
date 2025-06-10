@@ -331,6 +331,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
     },
     [SupportedMainnet.Gnosis]: {},
     [SupportedMainnet.Telos]: {
+        "0xaf89115201ae5e89e77cd21e2960546f4f82a3cf":
+            selfHostedIconUrl("deflation.png"),
+        "0xee327f30da53b42ccf80a6b86f818702365ef954":
+            selfHostedIconUrl("gm.png"),
         "0x8f7d64ea96d729ef24a0f30b4526d47b80d877b9":
             selfHostedIconUrl("usdm.png"),
         "0x674843c06ff83502ddb4d37c2e09c01cda38cbc8":
