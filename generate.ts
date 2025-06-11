@@ -351,6 +351,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0x5Cf6826140C1C56Ff49C808A1A75407Cd1DF9423":
             "https://assets.coingecko.com/coins/images/38591/standard/iSEI_logo_200_200.png?1718091709",
+        "0x0555e30da8f98308edb960aa94c0db47230d2b9c":
+            "https://assets.coingecko.com/coins/images/7598/standard/wrapped_bitcoin_wbtc.png",
+        "0x9151434b16b9763660705744891fa906f660ecc5":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
     [SupportedMainnet.Swell]: {
         "0x4200000000000000000000000000000000000006":
