@@ -349,6 +349,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/Seitrace/sei-assetlist/main/images/Sei.png",
         "0xb75d0b03c06a926e488e2659df1a861f860bd3d1":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+        "0x5Cf6826140C1C56Ff49C808A1A75407Cd1DF9423":
+            "https://assets.coingecko.com/coins/images/38591/standard/iSEI_logo_200_200.png?1718091709",
     },
     [SupportedMainnet.Swell]: {
         "0x4200000000000000000000000000000000000006":
