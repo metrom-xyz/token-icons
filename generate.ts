@@ -23,6 +23,7 @@ enum SupportedMainnet {
     Form = SupportedChain.Form,
     Gnosis = SupportedChain.Gnosis,
     Telos = SupportedChain.Telos,
+    Lens = SupportedChain.Lens,
     LightLinkPhoenix = SupportedChain.LightLinkPhoenix,
     Sei = SupportedChain.Sei,
     Swell = SupportedChain.Swell,
@@ -337,6 +338,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
         "0xD102cE6A4dB07D247fcc28F366A623Df0938CA9E":
             "https://assets.coingecko.com/coins/images/23952/standard/tlos_png.png",
+    },
+    [SupportedMainnet.Lens]: {
+        "0x000000000000000000000000000000000000800A":
+            selfHostedIconUrl("gho.png"),
     },
     [SupportedMainnet.LightLinkPhoenix]: {
         "0x7ebef2a4b1b09381ec5b9df8c5c6f2dbeca59c73":
