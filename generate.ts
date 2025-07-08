@@ -317,6 +317,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/52857/standard/wrapped_sonic.png",
         "0x2fb960611bdc322a9a4a994252658cae9fe2eea1":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png",
+        "0x6fbaeE8bEf2e8f5c34A08BdD4A4AB777Bd3f6764": selfHostedIconUrl("alp.png")
     },
     [SupportedMainnet.Form]: {
         "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D":
