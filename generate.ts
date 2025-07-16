@@ -25,6 +25,7 @@ enum SupportedMainnet {
     Telos = SupportedChain.Telos,
     Lens = SupportedChain.Lens,
     LightLinkPhoenix = SupportedChain.LightLinkPhoenix,
+    Lumia = SupportedChain.Lumia,
     Sei = SupportedChain.Sei,
     Swell = SupportedChain.Swell,
     Hemi = SupportedChain.Hemi,
@@ -317,7 +318,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/52857/standard/wrapped_sonic.png",
         "0x2fb960611bdc322a9a4a994252658cae9fe2eea1":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png",
-        "0x6fbaeE8bEf2e8f5c34A08BdD4A4AB777Bd3f6764": selfHostedIconUrl("alp.png")
+        "0x6fbaeE8bEf2e8f5c34A08BdD4A4AB777Bd3f6764":
+            selfHostedIconUrl("alp.png"),
     },
     [SupportedMainnet.Form]: {
         "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D":
@@ -368,9 +370,17 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x0000baa0b1678229863c0a941c1056b83a1955f5":
             selfHostedIconUrl("usdk.png"),
     },
-    [SupportedChain.Hemi]: {
+    [SupportedMainnet.Hemi]: {
         "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    },
+    [SupportedMainnet.Lumia]: {
+        "0xdcb5227ea8e5fde0f761a55dc669ec09807e7c8b":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0xff297ac2cb0a236155605eb37cb55cfcae6d3f01":
+            "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
+        "0xe891b5ee2f52e312038710b761ec165792ad25b1":
+            "https://assets.coingecko.com/coins/images/50867/standard/lumia.jpg",
     },
 });
 
