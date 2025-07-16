@@ -381,6 +381,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
         "0xe891b5ee2f52e312038710b761ec165792ad25b1":
             "https://assets.coingecko.com/coins/images/50867/standard/lumia.jpg",
+        "0xee7fc418f5659a366b548b4e205d374c1f0b46e7":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
 });
 
