@@ -29,6 +29,8 @@ enum SupportedMainnet {
     Sei = SupportedChain.Sei,
     Swell = SupportedChain.Swell,
     Hemi = SupportedChain.Hemi,
+    // Needed for Orki campaign
+    Mainnet = 1,
 }
 
 type TokenIcons = Record<number, Record<Address, string>>;
@@ -386,6 +388,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xd523474C9F8D5e6C0FBcc5FADEA961E6639147Bf":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
+    [SupportedMainnet.Mainnet]: {},
 });
 
 const promises = Object.entries(TOKEN_LIST_EXTRACTORS).map(
