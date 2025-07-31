@@ -388,7 +388,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xd523474C9F8D5e6C0FBcc5FADEA961E6639147Bf":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
-    [SupportedMainnet.Mainnet]: {},
+    [SupportedMainnet.Mainnet]: {
+        "0x6440f144b7e50D6a8439336510312d2F54beB01D":
+            "https://assets.coingecko.com/coins/images/56069/standard/BOLD_logo.png",
+    },
 });
 
 const promises = Object.entries(TOKEN_LIST_EXTRACTORS).map(
