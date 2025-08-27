@@ -336,6 +336,44 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/28777/standard/swell1.png",
         "0x1a17b22d762c8cf2ca0f07e2b3c32e7481bb0d8c":
             "https://assets.coingecko.com/coins/images/56069/standard/BOLD_logo.png",
+        "0x7c98e0779eb5924b3ba8ce3b17648539ed5b0ecc":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/61bd908177ce4eef8d4a9.png",
+        "0x0000000000000000000000000000000000000000":
+            "https://ethereum-optimism.github.io/data/ETH/logo.svg",
+        "0x9cb41cd74d01ae4b4f640ec40f7a60ca1bcf83e7":
+            "https://raw.githubusercontent.com/hyperlane-xyz/hyperlane-registry/refs/heads/main/deployments/warp_routes/PZETH/logo.svg",
+        "0x2416092f143378750bb29b79ed961ab195cceea5":
+            "https://raw.githubusercontent.com/hyperlane-xyz/hyperlane-registry/refs/heads/main/deployments/warp_routes/EZETH/logo.svg",
+        "0xfa3198ecf05303a6d96e57a45e6c815055d255b1":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/bsquared.svg",
+        "0x09341022ea237a4db1644de7ccf8fa0e489d85b7":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/971f401121cc90314670c.svg",
+        "0xf6718b2701d4a6498ef77d7c152b2137ab28b8a3":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/b117125c9a7f883197b59.svg",
+        "0x939f1cc163fdc38a77571019eb4ad1794873bf8c":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/bafadce2c7f8b374f127b.svg",
+        "0x80ccfbec4b8c82265abdc226ad3df84c0726e7a3":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/9df01e18386ccd27c185b.svg",
+        "0xc3eacf0612346366db554c991d7858716db09f58":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/e1522c29a42749fd5ec81.svg",
+        "0xa6cb988942610f6731e664379d15ffcfbf282b44":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/2305e6804e5346fb5545e.png",
+        "0x18d33689ae5d02649a859a1cf16c9f0563975258":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/43595da313df6982d1087.png",
+        "0x2826d136f5630ada89c1678b64a61620aab77aea":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/4b0af65ae04a5d71cceeb.svg",
+        "0x58538e6a46e07434d7e7375bc268d3cb839c0133":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/60dd3dc60c18e005f5a9f.svg",
+        "0x211cc4dd073734da055fbf44a2b4667d5e5fe5d2":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/960dd3dc60c18e005f5a9.svg",
+        "0x5d3a1ff2b6bab83b63cd9ad0787074081a52ef34":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/93319e2f5ffa837ab7506.jpg",
+        "0xc2606aade4bdd978a4fa5a6edb3b66657acee6f8":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/59df01e18386ccd27c185.png",
+        "0x9ab96a4668456896d45c301bc3a15cee76aa7b8d":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/d857ac137bbb4a1323172.jpg",
+        "0x1cf7b5f266a0f39d6f9408b90340e3e71df8bf7b":
+            "https://s3.us-east-2.amazonaws.com/assets.rollbridge.app/64b0af65ae04a5d71ccee.svg",
     },
     [SupportedMainnet.Hemi]: {
         "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e":
