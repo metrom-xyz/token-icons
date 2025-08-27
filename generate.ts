@@ -373,6 +373,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             selfHostedIconUrl("usdk.png"),
         "0xda1F8EA667dc5600F5f654DF44b47F1639a83DD1":
             "https://assets.coingecko.com/coins/images/28777/standard/swell1.png",
+        "0x1a17b22d762c8cf2ca0f07e2b3c32e7481bb0d8c":
+            "https://assets.coingecko.com/coins/images/56069/standard/BOLD_logo.png",
     },
     [SupportedMainnet.Hemi]: {
         "0xbb0d083fb1be0a9f6157ec484b6c79e0a4e31c2e":
