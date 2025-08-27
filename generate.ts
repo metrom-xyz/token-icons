@@ -20,7 +20,6 @@ enum SupportedMainnet {
     Taiko = SupportedChain.Taiko,
     Scroll = SupportedChain.Scroll,
     Sonic = SupportedChain.Sonic,
-    Form = SupportedChain.Form,
     Gnosis = SupportedChain.Gnosis,
     Telos = SupportedChain.Telos,
     Lens = SupportedChain.Lens,
@@ -46,28 +45,6 @@ async function rawTokensListExtractor(url: string): Promise<TokenInfo[]> {
     const response = await fetch(url);
     if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
     return (await response.json()) as TokenInfo[];
-}
-
-async function formTokensListExtractor(url: string): Promise<TokenInfo[]> {
-    const response = await fetch(url, {
-        headers: {
-            Origin: "https://bridge.form.network",
-        },
-    });
-    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
-    const list = (await response.json()) as Record<number, TokenInfo>[];
-    return list.flatMap((item) => Object.values(item));
-}
-
-async function swellTokensListExtractor(url: string): Promise<TokenInfo[]> {
-    const response = await fetch(url, {
-        headers: {
-            Origin: "https://superbridge.swellnetwork.io",
-        },
-    });
-    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
-    const list = (await response.json()) as Record<number, TokenInfo>[];
-    return list.flatMap((item) => Object.values(item));
 }
 
 interface TelosToken {
@@ -160,16 +137,12 @@ const TOKEN_LIST_EXTRACTORS: Record<
     "https://raw.githubusercontent.com/scroll-tech/token-list/refs/heads/main/scroll.tokenlist.json":
         fullTokenListExtractor,
     "https://bridge.gnosischain.com/api/tokens": rawTokensListExtractor,
-    "https://api.superbridge.app/api/bridge/tokens/bridge.form.network":
-        formTokensListExtractor,
     // FIXME: list not working (could be a temporary issue)
     // "https://bridge.telos.net/api/trpc/tokens": telosTokensListExtractor,
     "https://bridgev1.telos.net/api/trpc/tokens": telosTokensListExtractor,
     "https://cdn.oku.trade/tokenlist.json": fullTokenListExtractor,
     "https://raw.githubusercontent.com/Seitrace/sei-assetlist/refs/heads/main/assetlist.json":
         seiTokensListExtractor,
-    "https://api.superbridge.app/api/v2/bridge/paid_deployment_tokens/676fad03-4ddc-40d1-882c-d8543cd0458d":
-        swellTokensListExtractor,
     "https://raw.githubusercontent.com/hemilabs/token-list/refs/heads/master/src/hemi.tokenlist.json":
         fullTokenListExtractor,
 };
@@ -322,18 +295,6 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x1f9840a85d5aF5bf1D1762F925BDADdC4201F984/logo.png",
         "0x6fbaeE8bEf2e8f5c34A08BdD4A4AB777Bd3f6764":
             selfHostedIconUrl("alp.png"),
-    },
-    [SupportedMainnet.Form]: {
-        "0xFBf489bb4783D4B1B2e7D07ba39873Fb8068507D":
-            "https://assets.coingecko.com/coins/images/33000/standard/usdc.png",
-        "0xFA3198ecF05303a6d96E57a45E6c815055D255b1":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
-        "0x96D51cc3f7500d501bAeB1A2a62BB96fa03532F8":
-            "https://assets.coingecko.com/coins/images/51063/standard/Gaming_Agent_1fe70d54ba.jpg",
-        "0x40Ca4155c0334F7e0F6d7F80536B59EF8831c9fb":
-            "https://assets.coingecko.com/coins/images/51784/standard/3.png",
-        "0xb1b812b664c28E1bA1d35De925Ae88b7Bc7cdCF5":
-            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
     },
     [SupportedMainnet.Gnosis]: {},
     [SupportedMainnet.Telos]: {
