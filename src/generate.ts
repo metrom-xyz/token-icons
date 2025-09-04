@@ -1,129 +1,22 @@
-import { TokenInfo, type TokenList } from "@uniswap/token-lists";
 import { type Address } from "viem";
 import { writeFileSync } from "node:fs";
-import { SupportedChain } from "@metrom-xyz/contracts";
-
-enum SupportedTestnet {
-    Holesky = SupportedChain.Holesky,
-    Sepolia = SupportedChain.Sepolia,
-    BaseSepolia = SupportedChain.BaseSepolia,
-    // TODO: these are temporary as we are testing Carbon on Sei on dev,
-    // remove this as soon as that is done
-    Sei = SupportedChain.Sei,
-    Hemi = SupportedChain.Hemi,
-}
-
-enum SupportedMainnet {
-    Mode = SupportedChain.Mode,
-    Mantle = SupportedChain.Mantle,
-    Base = SupportedChain.Base,
-    Taiko = SupportedChain.Taiko,
-    Scroll = SupportedChain.Scroll,
-    Sonic = SupportedChain.Sonic,
-    Gnosis = SupportedChain.Gnosis,
-    Telos = SupportedChain.Telos,
-    Lens = SupportedChain.Lens,
-    LightLinkPhoenix = SupportedChain.LightLinkPhoenix,
-    Lumia = SupportedChain.Lumia,
-    Sei = SupportedChain.Sei,
-    Swell = SupportedChain.Swell,
-    Hemi = SupportedChain.Hemi,
-    // Needed for Orki campaign
-    Mainnet = 1,
-}
+import { TokenInfo } from "./types/token";
+import {
+    SupportedAptosMainnet,
+    SupportedAptosTestnet,
+    SupportedMainnet,
+    SupportedTestnet,
+} from "./types/chain";
+import {
+    aptosTokensListExtractor,
+    fullTokenListExtractor,
+    rawTokensListExtractor,
+    seiTokensListExtractor,
+    telosTokensListExtractor,
+} from "./extractors";
+import { ChainType } from "@metrom-xyz/sdk";
 
 type TokenIcons = Record<number, Record<Address, string>>;
-
-async function fullTokenListExtractor(url: string): Promise<TokenInfo[]> {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
-    const list = (await response.json()) as TokenList;
-    return list.tokens;
-}
-
-async function rawTokensListExtractor(url: string): Promise<TokenInfo[]> {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
-    return (await response.json()) as TokenInfo[];
-}
-
-interface TelosToken {
-    chainKey: string;
-    decimals: number;
-    symbol: string;
-    name: string;
-    address: string | null;
-    icon: string;
-}
-
-async function telosTokensListExtractor(url: string): Promise<TokenInfo[]> {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
-    const list = (await response.json()) as {
-        result: { data: TelosToken[] };
-    };
-    const tokens = [];
-    for (const token of list.result.data) {
-        if (token.chainKey !== "telos" || !token.address) continue;
-        tokens.push(<TokenInfo>{
-            chainId: 40, // telos' chain id from chainlist
-            address: token.address,
-            logoURI: token.icon,
-        });
-    }
-    return tokens;
-}
-
-interface SeiToken {
-    symbol: string;
-    name: string;
-    base: string;
-    denom_units: { denom: string; exponent: number }[];
-    images: { png?: string; svg?: string };
-}
-
-async function seiTokensListExtractor(url: string): Promise<TokenInfo[]> {
-    const response = await fetch(url, {
-        headers: {
-            Origin: "https://raw.githubusercontent.com/Seitrace/sei-assetlist/refs/heads/main/assetlist.json",
-        },
-    });
-    if (!response.ok) throw new Error(`${url}: ${await response.text()}`);
-    const list = (await response.json()) as Record<string, SeiToken[]>;
-    const tokens = list["pacific-1"];
-
-    const out: TokenInfo[] = [];
-    for (const token of tokens) {
-        const denomUnit = token.denom_units.find(
-            (item) => item.denom.toLowerCase() === token.symbol.toLowerCase(),
-        );
-        if (!denomUnit) {
-            console.warn(
-                `Could not resolve decimals for token ${token.symbol} on Sei, skipping`,
-            );
-            continue;
-        }
-
-        const logoURI = token.images["svg"] || token.images["png"];
-        if (!logoURI) {
-            console.warn(
-                `Could not resolve logo URI for token ${token.symbol} on Sei, skipping`,
-            );
-            continue;
-        }
-
-        out.push({
-            chainId: SupportedChain.Sei,
-            address: token.base,
-            name: token.name,
-            symbol: token.symbol,
-            decimals: denomUnit.exponent,
-            logoURI,
-        });
-    }
-
-    return out;
-}
 
 const TOKEN_LIST_EXTRACTORS: Record<
     string,
@@ -137,8 +30,8 @@ const TOKEN_LIST_EXTRACTORS: Record<
     "https://raw.githubusercontent.com/scroll-tech/token-list/refs/heads/main/scroll.tokenlist.json":
         fullTokenListExtractor,
     "https://bridge.gnosischain.com/api/tokens": rawTokensListExtractor,
-    // FIXME: list not working (could be a temporary issue)
-    // "https://bridge.telos.net/api/trpc/tokens": telosTokensListExtractor,
+    "https://raw.githubusercontent.com/PanoraExchange/Aptos-Tokens/refs/heads/main/token-list.json":
+        aptosTokensListExtractor,
     "https://bridgev1.telos.net/api/trpc/tokens": telosTokensListExtractor,
     "https://cdn.oku.trade/tokenlist.json": fullTokenListExtractor,
     "https://raw.githubusercontent.com/Seitrace/sei-assetlist/refs/heads/main/assetlist.json":
@@ -204,7 +97,17 @@ const testnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xb75d0b03c06a926e488e2659df1a861f860bd3d1":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
-    [SupportedChain.Hemi]: {},
+    [SupportedTestnet.Hemi]: {},
+    [SupportedAptosTestnet.Testnet]: {
+        "0x000000000000000000000000000000000000000000000000000000000000000a":
+            "https://assets.panora.exchange/tokens/aptos/APT.svg",
+        "0x69091fbab5f7d635ee7ac5098cf0c1efbe31d68fec0f2cd565e8d168daf52832":
+            "https://assets.panora.exchange/tokens/aptos/USDC.svg",
+        "0xd5d0d561493ea2b9410f67da804653ae44e793c2423707d4f11edb2e38192050":
+            "https://static.optimism.io/data/USDT/logo.png",
+        "0x8e67e42c4ff61e16dca908b737d1260b312143c1f7ba1577309f075a27cb4d90":
+            "https://assets.panora.exchange/tokens/aptos/sUSDe.png",
+    },
 });
 
 const mainnetIcons: TokenIcons = lowercaseAddressKeys({
@@ -391,7 +294,9 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xd523474C9F8D5e6C0FBcc5FADEA961E6639147Bf":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
-    [SupportedMainnet.Mainnet]: {
+    // TODO: not ideal but works for now. If we want to have different mappings for each chain type we need to have
+    // a chain type on every token entity on the frontend, which is currently missing.
+    [SupportedMainnet.Mainnet | SupportedAptosMainnet.Mainnet]: {
         "0x6440f144b7e50D6a8439336510312d2F54beB01D":
             "https://assets.coingecko.com/coins/images/56069/standard/BOLD_logo.png",
     },
@@ -410,10 +315,22 @@ for (const result of results) {
         console.warn(`Could not fetch token list: ${result.reason}`);
     } else {
         for (const token of result.value) {
-            if (token.chainId in SupportedTestnet)
-                insertTokenInList(testnetIcons, token);
-            if (token.chainId in SupportedMainnet)
-                insertTokenInList(mainnetIcons, token);
+            const chainType = token.chainType;
+            const chainId = token.chainId;
+
+            if (chainType === ChainType.Evm) {
+                if (chainId in SupportedTestnet)
+                    insertTokenInList(testnetIcons, token);
+                if (chainId in SupportedMainnet)
+                    insertTokenInList(mainnetIcons, token);
+            }
+
+            if (chainType === ChainType.Aptos) {
+                if (chainId in SupportedAptosTestnet)
+                    insertTokenInList(testnetIcons, token);
+                if (chainId in SupportedAptosMainnet)
+                    insertTokenInList(mainnetIcons, token);
+            }
         }
     }
 }

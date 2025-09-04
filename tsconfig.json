@@ -1,6 +1,6 @@
 {
     "extends": "@tsconfig/node20/tsconfig.json",
-    "include": ["generate.ts"],
+    "include": ["src"],
     "exclude": ["./node_modules"],
     "compilerOptions": {
         "module": "ESNext",

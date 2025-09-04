@@ -4,7 +4,7 @@
     "name": "token-icons",
     "version": "0.0.1",
     "scripts": {
-        "generate": "tsx ./generate.ts",
+        "generate": "tsx ./src/generate.ts",
         "lint": "eslint .",
         "format": "eslint --fix .",
         "commitlint": "commitlint -e",
@@ -14,7 +14,9 @@
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
         "@eslint/js": "^9.31.0",
+        "@metrom-xyz/aptos-contracts": "^0.6.0",
         "@metrom-xyz/contracts": "^0.50.0",
+        "@metrom-xyz/sdk": "^0.6.0",
         "@tsconfig/node20": "^20.1.6",
         "@types/node": "^24.0.14",
         "@uniswap/token-lists": "1.0.0-beta.34",
