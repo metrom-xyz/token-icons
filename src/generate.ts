@@ -301,6 +301,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://assets.coingecko.com/coins/images/56069/standard/BOLD_logo.png",
         "0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b":
             "https://static.optimism.io/data/USDT/logo.png",
+        "0x88887be419578051ff9f4eb6c858a951921d8888":
+            "https://assets.coingecko.com/coins/images/69060/standard/stcUSD_ab_200%C3%97200.png",
     },
 });
 
