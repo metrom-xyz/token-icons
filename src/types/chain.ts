@@ -2,7 +2,6 @@ import { SupportedChain } from "@metrom-xyz/contracts";
 // import { SupportedChain as SupportedAptosChain } from "@metrom-xyz/aptos-contracts";
 
 export enum SupportedTestnet {
-    Holesky = SupportedChain.Holesky,
     Sepolia = SupportedChain.Sepolia,
     BaseSepolia = SupportedChain.BaseSepolia,
     // TODO: these are temporary as we are testing Carbon on Sei on dev,
@@ -26,6 +25,7 @@ export enum SupportedMainnet {
     Sei = SupportedChain.Sei,
     Swell = SupportedChain.Swell,
     Hemi = SupportedChain.Hemi,
+    Plasma = SupportedChain.Plasma,
     // Needed for Orki campaign
     Mainnet = 1,
 }
