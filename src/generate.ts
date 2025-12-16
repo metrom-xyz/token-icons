@@ -282,6 +282,16 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xd523474C9F8D5e6C0FBcc5FADEA961E6639147Bf":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
+    [SupportedMainnet.Arbitrum]: {
+        "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+    },
+    [SupportedMainnet.Saga]: {
+        "0xeb41D53F14Cb9a67907f2b8b5DBc223944158cCb":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0xeb41d53f14cb9a67907f2b8b5dbc223944158ccb":
+            "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
+    },
     // TODO: not ideal but works for now. If we want to have different mappings for each chain type we need to have
     // a chain type on every token entity on the frontend, which is currently missing.
     [SupportedMainnet.Mainnet | SupportedAptosMainnet.Mainnet]: {
