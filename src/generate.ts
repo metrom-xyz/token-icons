@@ -138,6 +138,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/baseswapfi/default-token-list/fd33e52868f183d366054eaaf427a343c41ee9aa/images/USD+.svg",
         "0xd5046b976188eb40f6de40fb527f89c05b323385":
             "https://assets.coingecko.com/coins/images/31419/standard/bsxlogo.png?1696530234",
+        "0x9CD7EC05f483069353F4E487dABE644306014963":
+            "https://greenfield-sp.defibit.io/view/aaa/BTC.png",
+        "0x64eea6154c645bac1a948a17ab9017e5ccc0720e":
+            "https://greenfield-sp.defibit.io/view/aaa/favicon.png",
     },
     [SupportedMainnet.Taiko]: {
         "0xA51894664A773981C6C112C43ce576f315d5b1B6":
@@ -282,9 +286,11 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xd523474C9F8D5e6C0FBcc5FADEA961E6639147Bf":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xdAC17F958D2ee523a2206206994597C13D831ec7/logo.png",
     },
-    [SupportedMainnet.Arbitrum]: {
+    [SupportedMainnet.ArbitrumOne]: {
         "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1":
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
+        "0x64eea6154c645bac1a948a17ab9017e5ccc0720e":
+            "https://greenfield-sp.defibit.io/view/aaa/favicon.png",
     },
     [SupportedMainnet.Saga]: {
         "0xeb41d53f14cb9a67907f2b8b5dbc223944158ccb":

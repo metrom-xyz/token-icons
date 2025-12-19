@@ -4,7 +4,7 @@
     "name": "token-icons",
     "version": "0.0.1",
     "scripts": {
-        "generate": "tsx ./src/generate.ts",
+        "generate": "tsx --no-cache ./src/generate.ts",
         "lint": "eslint .",
         "format": "eslint --fix .",
         "commitlint": "commitlint -e",

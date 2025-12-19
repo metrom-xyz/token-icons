@@ -27,7 +27,7 @@ export enum SupportedMainnet {
     Hemi = SupportedChain.Hemi,
     Plasma = SupportedChain.Plasma,
     Saga = SupportedChain.Saga,
-    Arbitrum = SupportedChain.ArbitrumOne,
+    ArbitrumOne = SupportedChain.ArbitrumOne,
     // Needed for Orki campaign
     Mainnet = 1,
 }
