@@ -291,6 +291,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2/logo.png",
         "0x64eea6154c645bac1a948a17ab9017e5ccc0720e":
             "https://greenfield-sp.defibit.io/view/aaa/favicon.png",
+        "0x5bcF2be3Bf0243655f121C85763A0a063Bb8152c":
+            "https://greenfield-sp.defibit.io/view/aaa/BTC.png",
     },
     [SupportedMainnet.Saga]: {
         "0xeb41d53f14cb9a67907f2b8b5dbc223944158ccb":
