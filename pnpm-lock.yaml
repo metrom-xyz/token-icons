@@ -21,8 +21,8 @@ importers:
         specifier: ^0.9.0
         version: 0.9.0
       '@metrom-xyz/contracts':
-        specifier: ^0.53.0
-        version: 0.53.0(typescript@5.8.3)(zod@3.24.4)
+        specifier: ^0.54.0
+        version: 0.54.0(typescript@5.8.3)(zod@3.24.4)
       '@metrom-xyz/sdk':
         specifier: ^0.7.0
         version: 0.7.0
@@ -362,8 +362,8 @@ packages:
   '@metrom-xyz/aptos-contracts@0.9.0':
     resolution: {integrity: sha512-ygbcpcqOUbh98CmT2cwhnGL/6EXblgLd/ewR1sTqIdKWr+xFwdL/X4C73O/YI1zpzTunNXDLMHLR9HkFzAc8eQ==}
 
-  '@metrom-xyz/contracts@0.53.0':
-    resolution: {integrity: sha512-jbeDd70xLmYEoWgLJUmUVViWSnQdAJ/Ggg2he52nKVw3Zlc6GZtlY1d9O5Oq4Z6Qq45PZww0RgG0vOotEfi1Og==}
+  '@metrom-xyz/contracts@0.54.0':
+    resolution: {integrity: sha512-cTJu546VeG1FCDaGTFP7bg/5JgkgP/bAP2e7dow9GN73S01B7Fk+EGO8hLb8TfzyAFG6ikVcGbnDRWy8W2+Gdw==}
 
   '@metrom-xyz/sdk@0.7.0':
     resolution: {integrity: sha512-I2Hdy1CiowwlmMvdLxIyIV9KPIPvhuPY8AO5hnLB0HlJLExM1SUu/XUeSBtvUzfjsRgeh6vGh4xxJbFzicLB6A==}
@@ -1474,7 +1474,7 @@ snapshots:
 
   '@metrom-xyz/aptos-contracts@0.9.0': {}
 
-  '@metrom-xyz/contracts@0.53.0(typescript@5.8.3)(zod@3.24.4)':
+  '@metrom-xyz/contracts@0.54.0(typescript@5.8.3)(zod@3.24.4)':
     dependencies:
       viem: 2.41.2(typescript@5.8.3)(zod@3.24.4)
     transitivePeerDependencies:
