@@ -307,6 +307,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://ethereum-optimism.github.io/data/weETH/logo.svg",
         "0x1b64b9025eebb9a6239575df9ea4b9ac46d4d193":
             "https://assets.coingecko.com/coins/images/66560/standard/XAUt0_Token_Icon_Gold.png?1749747942",
+        "0xe0126f0c4451b2b917064a93040fd4770d6774b5":
+            "https://assets.coingecko.com/coins/images/69597/standard/waplasusdt0.png",
+        "0xef7b1a03e0897c33b63159e38d779e3970c0e2fc":
+            "https://assets.coingecko.com/coins/images/66485/standard/0x09fd37d9aa613789c517e76df1c53aece2b60df4.png",
     },
     // TODO: not ideal but works for now. If we want to have different mappings for each chain type we need to have
     // a chain type on every token entity on the frontend, which is currently missing.
