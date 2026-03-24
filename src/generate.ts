@@ -38,6 +38,8 @@ const TOKEN_LIST_EXTRACTORS: Record<
         seiTokensListExtractor,
     "https://raw.githubusercontent.com/hemilabs/token-list/refs/heads/master/src/hemi.tokenlist.json":
         fullTokenListExtractor,
+    "https://raw.githubusercontent.com/megaeth-labs/mega-tokenlist/refs/heads/main/megaeth.tokenlist.json":
+        fullTokenListExtractor,
 };
 
 function lowercaseAddressKeys(icons: TokenIcons): TokenIcons {
@@ -312,6 +314,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0xef7b1a03e0897c33b63159e38d779e3970c0e2fc":
             "https://assets.coingecko.com/coins/images/66485/standard/0x09fd37d9aa613789c517e76df1c53aece2b60df4.png",
     },
+    [SupportedMainnet.MegaEth]: {},
     // TODO: not ideal but works for now. If we want to have different mappings for each chain type we need to have
     // a chain type on every token entity on the frontend, which is currently missing.
     [SupportedMainnet.Mainnet | SupportedAptosMainnet.Mainnet]: {
