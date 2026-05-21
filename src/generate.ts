@@ -144,6 +144,10 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://greenfield-sp.defibit.io/view/aaa/BTC.png",
         "0x64eea6154c645bac1a948a17ab9017e5ccc0720e":
             "https://greenfield-sp.defibit.io/view/aaa/favicon.png",
+        "0x9bc2c28df6560c343d3fa9c152bed80d4511dead":
+            "https://www.dead.box/assets/usdead-coin-icon-BYmuRLsp.png",
+        "0xc338D75F175EA57777Ddc3b933bBFa0C1344ad24":
+            "https://www.dead.box/assets/udead-coin-icon-BrWHN5a6.png",
     },
     [SupportedMainnet.Taiko]: {
         "0xA51894664A773981C6C112C43ce576f315d5b1B6":
