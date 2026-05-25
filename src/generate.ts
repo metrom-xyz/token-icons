@@ -145,7 +145,7 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
         "0x64eea6154c645bac1a948a17ab9017e5ccc0720e":
             "https://greenfield-sp.defibit.io/view/aaa/favicon.png",
         "0x9bc2c28df6560c343d3fa9c152bed80d4511dead":
-            selfHostedIconUrl("usddead.png"),
+            selfHostedIconUrl("usdead.png"),
         "0xc338D75F175EA57777Ddc3b933bBFa0C1344ad24":
             selfHostedIconUrl("udead.png"),
     },
