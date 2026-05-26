@@ -299,6 +299,8 @@ const mainnetIcons: TokenIcons = lowercaseAddressKeys({
             "https://greenfield-sp.defibit.io/view/aaa/favicon.png",
         "0x5bcF2be3Bf0243655f121C85763A0a063Bb8152c":
             "https://greenfield-sp.defibit.io/view/aaa/BTC.png",
+        "0xfc8b4e2f2773bedcd14be22951144a5c7f863fad":
+            selfHostedIconUrl("arusd.svg"),
     },
     [SupportedMainnet.Saga]: {
         "0xeb41d53f14cb9a67907f2b8b5dbc223944158ccb":
